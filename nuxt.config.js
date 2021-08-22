@@ -32,12 +32,18 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
+    '@nuxtjs/eslint-module',
     '@nuxt/typescript-build',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    baseUrl: 'http://localhost:3001'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
